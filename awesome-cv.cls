@@ -398,14 +398,14 @@
 %-------------------------------------------------------------------------------
 %% Define helper macros a user can change easily
 % Header
-\newcommand{\acvHeaderNameDelim}{\space}
-\newcommand{\acvHeaderAfterNameSkip}{.4mm}
-\newcommand{\acvHeaderAfterPositionSkip}{.4mm}
-\newcommand{\acvHeaderAfterAddressSkip}{-.5mm}
-\newcommand{\acvHeaderIconSep}{\space}
-\newcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-\newcommand{\acvHeaderAfterSocialSkip}{6mm}
-\newcommand{\acvHeaderAfterQuoteSkip}{5mm}
+\newcommand{\acvHeaderNameDelim}{\;}
+\newcommand{\acvHeaderAfterNameSkip}{1mm}
+\newcommand{\acvHeaderAfterPositionSkip}{1mm}
+\newcommand{\acvHeaderAfterAddressSkip}{1mm}
+\newcommand{\acvHeaderIconSep}{\enspace}
+\newcommand{\acvHeaderSocialSep}{\qquad}
+\newcommand{\acvHeaderAfterSocialSkip}{3mm}
+\newcommand{\acvHeaderAfterQuoteSkip}{1mm}
 
 % Others
 \newcommand{\acvSectionTopSkip}{3mm}
@@ -450,8 +450,8 @@
   \newlength{\headertextwidth}
   \newlength{\headerphotowidth}
   \ifthenelse{\isundefined{\@photo}}{
-    \setlength{\headertextwidth}{\textwidth}
-    \setlength{\headerphotowidth}{0cm}
+    \setlength{\headertextwidth}{0.99\textwidth}
+    \setlength{\headerphotowidth}{0.01\textwidth}
   }{%
     \setlength{\headertextwidth}{0.76\textwidth}
     \setlength{\headerphotowidth}{0.24\textwidth}
@@ -487,6 +487,8 @@
           % \mbox prevents wrapping of elements%
           \mbox{\faBirthdayCake\acvHeaderIconSep\@dateofbirth}%
         }%
+      \linebreak
+      \setbool{isstart}{true}%
       \ifthenelse{\isundefined{\@homepage}}%
         {}%
         {%
@@ -722,8 +724,10 @@
 \newenvironment{cvitems}{%
   \vspace{-4.0mm}
   \begin{justify}
-  \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
-    \setlength{\parskip}{0pt}
+    \begin{itemize}[leftmargin=5ex]
+      \setlength{\parskip}{0pt}
+      \setlength{\itemsep}{3pt}
+      \setlength{\baselineskip}{13pt}
     \renewcommand{\labelitemi}{\bullet}
 }{%
   \end{itemize}
