@@ -124,9 +124,9 @@
 % Gray-scale colors
 \definecolor{white}{HTML}{FFFFFF}
 \definecolor{black}{HTML}{000000}
-\definecolor{darkgray}{HTML}{333333}
-\definecolor{gray}{HTML}{5D5D5D}
-\definecolor{lightgray}{HTML}{999999}
+\definecolor{darkgray}{HTML}{222222}
+\definecolor{gray}{HTML}{444444}
+\definecolor{lightgray}{HTML}{666666}
 % Basic colors
 \definecolor{green}{HTML}{C2E15F}
 \definecolor{orange}{HTML}{FDA333}
@@ -148,6 +148,7 @@
 \definecolor{awesome-nephritis}{HTML}{27AE60}
 \definecolor{awesome-concrete}{HTML}{95A5A6}
 \definecolor{awesome-darknight}{HTML}{131A28}
+\definecolor{awesome-rohandebsarkar}{HTML}{197EDA}
 \colorlet{awesome}{awesome-red}
 
 % Boolean value to switch section color highlighting
