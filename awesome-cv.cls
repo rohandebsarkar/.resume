@@ -694,7 +694,7 @@
     \recipienttitlestyle{\@recipientname} & \letterdatestyle{\@letterdate}
   \end{tabular*}
   \begin{singlespace}
-    \recipientaddressstyle{\@recipientaddress} \\\\
+    \recipientaddressstyle{\@recipientaddress} \vspace{2\baselineskip}
   \end{singlespace}
   \ifthenelse{\isundefined{\@lettertitle}}
     {}
@@ -706,12 +706,12 @@
 % Usage: \makeletterclosing
 \newcommand*{\makeletterclosing}{%
   \vspace{3.4mm}
-  \lettertextstyle{\@letterclosing} \\\\
+  \lettertextstyle{\@letterclosing} \vspace{\baselineskip}\\
   \letternamestyle{\@firstname\ \@lastname}
   \ifthenelse{\isundefined{\@letterenclosure}}
     {\\}
     {%
-      \\\\\\
-      \letterenclosurestyle{\@letterenclname: \@letterenclosure} \\
+    \vspace{2\baselineskip}\\
+      \letterenclosurestyle{\@letterenclname: \@letterenclosure} \vspace{\baselineskip}
     }
 }
