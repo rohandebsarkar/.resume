@@ -79,6 +79,8 @@
 \RequirePackage[skins]{tcolorbox}
 % Needed to deal a paragraphs
 \RequirePackage{parskip}
+% Needed to number pages
+\RequirePackage{lastpage}
 % Needed to deal hyperlink
 \RequirePackage[hidelinks,unicode]{hyperref}
 \hypersetup{%
@@ -376,6 +378,8 @@
   \def\@letterenclosure{#2}
 }
 
+% Define a command for numbering pages (Page n of last page)
+\newcommand*{\thepageoflastpage}{Page \; \thepage \; of \, \pageref{LastPage}}
 
 %-------------------------------------------------------------------------------
 %                Commands for extra
