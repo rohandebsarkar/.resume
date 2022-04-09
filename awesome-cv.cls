@@ -67,7 +67,7 @@
 % Needed to change line spacing in specific environment
 \RequirePackage{setspace}
 % Needed to manage fonts
-\RequirePackage[quiet]{fontspec}
+\RequirePackage{fontspec}
 % To support LaTeX quoting style
 \defaultfontfeatures{Ligatures=TeX}
 % Needed to manage math fonts
@@ -149,11 +149,11 @@
 %-------------------------------------------------------------------------------
 %                Configuration for fonts
 %-------------------------------------------------------------------------------
-\newcommand*{\headerfont}{\sourcesanspro}
-\newcommand*{\headerfontlight}{\sourcesansprolight}
-\newcommand*{\footerfont}{\sourcesanspro}
-\newcommand*{\bodyfont}{\sourcesanspro}
-\newcommand*{\bodyfontlight}{\sourcesanspro}
+\newcommand*{\headerfont}{\rmfamily}
+\newcommand*{\headerfontlight}{\ttfamily}
+\newcommand*{\footerfont}{\sffamily}
+\newcommand*{\bodyfont}{\sffamily}
+\newcommand*{\bodyfontlight}{\rmfamily}
 
 %-------------------------------------------------------------------------------
 %                Configuration for styles
@@ -173,7 +173,7 @@
 
 % For elements of entry
 \newcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bf\scshape\color{darktext} #1}}
-\newcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{graytext} #1}}
+\newcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\bf\scshape\color{graytext} #1}}
 \newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
 \newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
 \newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text} #1}}
