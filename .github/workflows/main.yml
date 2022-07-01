@@ -1,22 +1,33 @@
-name: Compile PDFs
+name: Build
 
 on:
-  push: {}
-  pull_request: {}
+  push:
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: texlive/texlive:latest
-
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Compile
-      run: make
+      - uses: xu-cheng/latex-action@v2
+        with:
+          working_directory: examples
+          root_file: "*.tex"
+          glob_root_file: true
+          latexmk_use_xelatex: true
+      
+      - name: git config
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-    - uses: actions/upload-artifact@v3
-      with:
-        name: examples
-        path: examples/*.pdf
+      - name: git commit && git push
+        run: |
+          git checkout -b gh-pages
+          mv examples/*.pdf ./
+          find . -type f,l ! -iwholename "./.git/*" ! -iname "*.pdf" -delete
+          touch .nojekyll
+          git add .
+          git commit -m "updated PDFs from commit ${GITHUB_SHA::8}"
+          git push -f origin gh-pages
