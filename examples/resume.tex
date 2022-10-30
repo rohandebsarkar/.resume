@@ -1,0 +1,114 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[12pt, a4paper, final]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=0.5in, top=1in, right=0.5in, bottom=1in, footskip=.5cm}
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-rohandebsarkar}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{false}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\qquad}
+
+\hypersetup{
+  pdfinfo={
+    Title={Résumé \textbullet{} Rohan Deb Sarkar},
+    Author={Rohan Deb Sarkar},
+    Subject={Rohan Deb Sarkar's Résumé},
+    Keywords={rohandebsarkar; resume; cv},
+  }
+}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo{./examples/profile.png}
+\name{Rohan Deb}{Sarkar}
+\position{Student at Ramakrishna Mission Vivekananda Centenary College}
+\address{Kolkata, West Bengal, Union of India}
+
+% \mobile{}
+\email{rohandebsarkar@gmail.com}
+\homepage{rohandebsarkar.github.io}
+\linkedin{rohandebsarkar}
+\github{rohandebsarkar}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \kaggle{kaggle-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra informations}
+
+\quote{``I believe in education as a weapon to make this world a better place for everyone.''}
+
+\linespread{0.9}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter{\today}
+  {Rohan Deb Sarkar~~~·~~~Résumé}
+  {\thepageoflastpage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+\input{resume/education.tex}
+
+\input{resume/certifications.tex}
+
+\input{resume/scholarships.tex}
+
+\input{resume/honors.tex}
+
+
+%-------------------------------------------------------------------------------
+\end{document}
